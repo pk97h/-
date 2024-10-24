@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영화 검색 사이트</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <form id="search_form">
+        <label for="movie_search">영화 검색</label>
+        <input type="text" id="movie_search" name="movie_search" placeholder="영화 제목을 입력하세요">
+        <input type="submit" id="movie_search_btn" value="검색">
+    </form>
+
+    <!-- 본문 -->
+    <div id="movie-list"></div> <!-- 영화카드 -->
+
+    <!-- 모달 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal_box">
+                <img id="modal-poster" src="" alt="영화 포스터"> <!-- 포스터 이미지 추가 -->
+                <div class="modal_box_content">
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-overview"></p>
+                    <p id="modal-release-date"></p>
+                    <p id="modal-vote-average"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+
+    <script src="api.js" type="module"></script>
+    <script src="ui.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+
+</body>
+
+</html>

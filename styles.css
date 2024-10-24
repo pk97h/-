@@ -1,0 +1,153 @@
+body {
+    background-color: white;
+}
+
+body, html {
+    margin: 0; /* 기본 여백 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+    height: 100%; /* 높이 설정 */
+}
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* 자식 요소가 컨테이너의 너비를 초과할 경우 다음 줄로 넘깁니다. */
+    gap: 20px;
+    /* 요소들 사이의 간격을 20px로 설정합니다. */
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.movie-card {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 230px;
+    transition: transform 0.3s ease;
+    /* 변환 효과 추가 */
+    cursor: pointer;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    /* 카드 크기 살짝 키우기 */
+}
+
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-info {
+    padding: 10px;
+}
+
+/* 검색창 스타일 */
+
+#search_form {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.764);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 200px;
+}
+
+#search_form>label {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#movie_search {
+    border-radius: 10px;
+    width: 60%;
+    height: 20%;
+}
+
+#movie_search_btn {
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 모달 스타일 */
+.modal {
+    display: none;
+    /* 기본적으로 보이지 않도록 설정 */
+    position: fixed;
+    z-index: 1000;
+    /* 다른 요소들 위에 표시 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* 콘텐츠가 넘치면 스크롤 */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 배경을 반투명으로 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    /* 상단 여백 조정 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* 너비 조정 */
+    border-radius: 10px;
+    /* 모서리 둥글게 */
+}
+
+#modal-poster {
+    width: 90%;
+    /* 포스터 이미지 너비 조정 */
+    height: auto;
+    /* 비율 유지 */
+    max-height: 500px;
+    /* 포스터와 텍스트 사이의 간격 */
+}
+
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+#modal-release-date,
+#modal-vote-average {
+    font-weight: 700;
+}
+
+.modal_box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.modal_box_content {
+    justify-content: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 100%; /* 최대 너비를 100%로 설정 */
+    padding: 1%;
+}
